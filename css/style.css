@@ -349,15 +349,15 @@ h6,
     margin-left: -20px;
     width: 800px;
   }
+
   .order-lg-2 {
     order: 2;
     margin-top: -50px;
     margin-left: -50px;
     width: 290px;
-    justify-content: center;
-
-    margin-left: 25px;
+    margin-left: 50px;
   }
+
   .container {
     margin-left: 0 !important;
   }

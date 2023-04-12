@@ -1,0 +1,193 @@
+/* Base styles */
+
+.work {
+  background-color: #f3525a;
+  display: grid;
+  grid: 150px / auto auto auto;
+  justify-content: center;
+  margin: auto;
+  height: 250px;
+  color: white;
+}
+.mainitem {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 50px;
+}
+.count p {
+  margin-left: 100px;
+}
+
+.count h2 {
+  font-size: 4rem;
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #ccc;
+}
+
+main {
+  padding-top: 80px;
+}
+
+.hero {
+  background-image: url("https://dummyimage.com/1200x400/ccc/fff");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding: 100px 20px;
+  color: #fff;
+}
+
+.hero h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.cta {
+  display: inline-block;
+  background-color: #fff;
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.cta:hover {
+  background-color: #ccc;
+  color: #fff;
+}
+
+.job-listings {
+  padding: 40px;
+  margin-top: -100px;
+}
+
+.job-listings h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.job-listings ul {
+  list-style: none;
+}
+
+.job-listings li {
+  background-color: #eee;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.job-listings li:hover {
+  background-color: #ccc;
+}
+
+.job-listings h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.job-listings p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.apply {
+  display: inline-block;
+  background-color: red;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.apply:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+.about-us {
+  padding: 40px;
+}
+
+.about-us h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.about-us p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: red;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 40px;
+  }
+}
