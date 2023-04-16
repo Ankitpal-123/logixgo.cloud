@@ -30,7 +30,8 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/career.css" rel="stylesheet">
+
+
 </head>
 
 <div>
@@ -76,22 +77,21 @@
     <!-- Contact Start -->
     <div class="container-fluid bg-secondary px-0">
         <div class="row g-0">
-            <div class="col-lg-6 py-6 px-5 contact-form-container">
+            <div class="col-lg-6 py-6 px-5">
                 <h1 class="display-5 mb-4">Contact For Any Queries</h1>
-                <form id="contact-form">
+                <form action="admin@logixgo.cloud" method="POST">
                     <div class="row g-3">
                         <div class="col-6">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="form-floating-1 name" placeholder="John Doe"
-                                    name="name" required>
-                                <label for="form-floating-1 name ">Full Name</label>
+                                <input type="text" class="form-control" id="form-floating-1" placeholder="John Doe">
+                                <label for="form-floating-1">Full Name</label>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="form-floating">
-                                <input type="email" id="email" class="form-control" id="form-floating-2" name="email"
+                                <input type="email" id="email" class="form-control" id="form-floating-2"
                                     placeholder="name@example.com">
-                                <label for="form-floating-2 email">Email address</label>
+                                <label for="form-floating-2">Email address</label>
                             </div>
                         </div>
                         <div class="col-12">
@@ -102,13 +102,13 @@
                         </div>
                         <div class="col-12">
                             <div class="form-floating">
-                                <textarea class="form-control" placeholder="Message" id="form-floating-4 message"
-                                    name="massage" style="height: 150px"></textarea>
-                                <label for="form-floating-4 message">Message</label>
+                                <textarea class="form-control" placeholder="Message" id="form-floating-4"
+                                    style="height: 150px"></textarea>
+                                <label for="form-floating-4">Message</label>
                             </div>
                         </div>
                         <div class="col-12">
-                            <button class="btn btn-primary w-100 py-3" id="send-btn" type="submit">Submit</button>
+                            <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
                         </div>
                     </div>
                 </form>
@@ -129,35 +129,6 @@
     <!-- Contact End -->
 
 
-    <!-- numbercounting -->
-    <div class="section work">
-        <div class="container mainitem">
-            <div class="count">
-                <h2 class="counter-number" data-target="2000" style="margin-left: 100px">
-                    0
-                </h2>
-                <p>project completed</p>
-            </div>
-            <div class="count">
-                <h2 class="counter-number" data-target="5000" style="margin-left: 100px">
-                    0
-                </h2>
-                <p>happy customers</p>
-            </div>
-            <div class="count">
-                <h2 class="counter-number" data-target="10" style="margin-left: 100px">
-                    0
-                </h2>
-                <p>years of experience</p>
-            </div>
-            <div class="count">
-                <h2 class="counter-number" data-target="100" style="margin-left: 100px">
-                    0
-                </h2>
-                <p>awards won</p>
-            </div>
-        </div>
-    </div>
 
 
 
@@ -233,64 +204,9 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-    <script>const container = document.querySelector(".container");
-        container.addEventListener("mouseenter", () => {
-            const counters = document.querySelectorAll(".counter-number");
-            const speed = 200;
-
-            counters.forEach((counter) => {
-                const updateCount = () => {
-                    const target = +counter.getAttribute("data-target");
-                    const count = +counter.innerText;
-
-                    const inc = target / speed;
-
-                    if (count < target) {
-                        counter.innerText = Math.ceil(count + inc);
-                        setTimeout(updateCount, 1);
-                    } else {
-                        counter.innerText = target;
-                    }
-                };
-
-                updateCount();
-            });
-
-
-        });</script>
 
 
 
-    <script>
-        // Replace the email address below with the owner's email address
-        const ownerEmail = 'pal787871@gmail.com.com';
-
-        const contactForm = document.getElementById('contact-form');
-        const sendBtn = document.getElementById('send-btn');
-
-        sendBtn.addEventListener('click', (event) => {
-            event.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-
-            // Validate the user's input
-            if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
-                alert('Please fill in all fields');
-                return;
-            }
-
-            const emailBody = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
-
-            // Send the email
-            const mailtoLink = `mailto:${ownerEmail}?subject=New message from ${name}&body=${emailBody}`;
-            window.location.href = mailtoLink;
-
-            // Clear the form
-            contactForm.reset();
-        });
-
-    </script>
     </body>
 
 </html>

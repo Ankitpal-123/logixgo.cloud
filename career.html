@@ -35,6 +35,8 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+
+
     <!-- Template Stylesheet -->
 
     <link href="css/style.css" rel="stylesheet">
@@ -239,6 +241,39 @@
 </div>
 <!-- read more popup box end -->
 
+<!-- numbercounting -->
+<div class="section work">
+    <div class="container mainitem">
+        <div class="count">
+            <h2 class="counter-number" data-target="1000" style="margin-left: 100px">
+                0
+            </h2>
+            <p>Project completed</p>
+        </div>
+        <div class="count">
+            <h2 class="counter-number" data-target="1000" style="margin-left: 100px">
+                0
+            </h2>
+            <p>Happy customers</p>
+        </div>
+        <div class="count">
+            <h2 class="counter-number" data-target="10" style="margin-left: 100px">
+                0
+            </h2>
+            <p>Years of experience</p>
+        </div>
+        <div class="count">
+            <h2 class="counter-number" data-target="100" style="margin-left: 100px">
+                0
+            </h2>
+            <p>Awards won</p>
+        </div>
+    </div>
+</div>
+
+
+
+
 <!-- Footer Start -->
 <div class="container-fluid bg-dark text-secondary p-5">
     <div class="row g-5 d-flex justify-content-center">
@@ -343,5 +378,34 @@
         popup.classList.toggle("open");
     }
 </script>
+
+
+
+
+<script>const container = document.querySelector(".container");
+    container.addEventListener("mouseenter", () => {
+        const counters = document.querySelectorAll(".counter-number");
+        const speed = 200;
+
+        counters.forEach((counter) => {
+            const updateCount = () => {
+                const target = +counter.getAttribute("data-target");
+                const count = +counter.innerText;
+
+                const inc = target / speed;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + inc);
+                    setTimeout(updateCount, 1);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+
+            updateCount();
+        });
+
+
+    });</script>
 
 </html>

@@ -172,3 +172,39 @@ body {
     width: calc(100% - 30px);
   }
 }
+
+.section.work {
+  display: flex;
+  background-color: #f3525a;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+}
+
+.container.mainitem {
+  display: flex;
+  flex-direction: row;
+}
+
+.count {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+}
+.count h2 {
+  color: white;
+}
+
+.counter-number {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.count p {
+  font-size: 18px;
+  margin-left: 100px;
+  color: white;
+}
