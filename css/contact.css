@@ -1,0 +1,57 @@
+.section.work {
+  display: flex;
+  background-color: #f3525a;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+}
+
+.container.mainitem {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.count {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+}
+.count h2 {
+  color: white;
+}
+
+.counter-number {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+}
+
+.count p {
+  font-size: 18px;
+  margin-left: 100px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .container.mainitem {
+    flex-wrap: wrap;
+  }
+
+  .section.work {
+    height: 500px;
+  }
+  .count {
+    margin: 10px 20px;
+  }
+
+  .count p {
+    margin: 0;
+    text-align: center;
+  }
+}
